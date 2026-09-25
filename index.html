@@ -2,39 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RGKM | Web Development & Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RGKM STUDIO — Web Development • UI/UX • Branding</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Syne:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080808;color:#fff;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
-.card{width:100%;max-width:410px;background:linear-gradient(180deg,#151515,#0a0a0a);border:1px solid rgba(201,168,106,0.35);border-radius:28px;padding:34px 28px;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,.8)}
-.logo{width:120px;height:120px;border-radius:50%;margin:0 auto 18px;border:2px solid #c9a86a;background:radial-gradient(circle at 30% 30%,#2a2a2a,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(201,168,106,0.3)}
-.logo-crown{font-size:28px;margin-bottom:2px}
-.logo-text{color:#c9a86a;font-size:22px;letter-spacing:4px;font-weight:700}
-h1{font-size:34px;letter-spacing:8px;font-weight:300}
-.tag{color:#c9a86a;font-size:10px;letter-spacing:3px;margin:10px 0 28px}
-.name{font-size:20px;font-weight:700}
-.role{color:#777;font-size:12px;letter-spacing:2px;margin:6px 0 28px;line-height:1.7}
-.line{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,106,.3),transparent);margin:24px 0}
-.btn{display:block;width:100%;padding:15px;text-decoration:none;border-radius:12px;font-weight:700;margin:11px 0;font-size:14px}
-.gold{background:#c9a86a;color:#000}
-.dark{background:transparent;color:#fff;border:1px solid #333}
-.foot{color:#4a4a4a;font-size:10px;letter-spacing:2px;margin-top:26px}
+body{background:#070708;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #151515}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:3px}
+.logo-mark{width:38px;height:38px;border:1px solid #d4b574;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 20px rgba(212,181,116,0.3)}
+.hero{padding:90px 0 50px;text-align:center;position:relative}
+.hero::before{content:'';position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,181,116,0.15),transparent 70%);pointer-events:none}
+.crown{width:140px;height:140px;margin:0 auto 25px;border:1.5px solid #d4b574;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at center,#1a1a1a,#070708);box-shadow:0 0 40px rgba(212,181,116,0.25),inset 0 0 20px rgba(212,181,116,0.1);animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.crown b{font-family:Syne;font-size:26px;letter-spacing:4px;color:#d4b574;margin-top:6px;display:block}
+.hero h1{font-family:Syne;font-size:64px;font-weight:800;letter-spacing:8px;line-height:0.9}
+.hero .sub{color:#d4b574;letter-spacing:4px;font-size:11px;margin-top:14px}
+.hero h2{margin-top:35px;font-size:28px;font-weight:700}
+.hero h2 span{color:#888;font-weight:300}
+.hero .tag{color:#666;font-size:13px;letter-spacing:2px;margin-top:8px}
+.btns{margin-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn{padding:15px 26px;border-radius:12px;font-weight:800;font-size:13px;border:1px solid #222;transition:0.3s;cursor:pointer}
+.btn-gold{background:#d4b574;color:#000;border-color:#d4b574;box-shadow:0 8px 25px rgba(212,181,116,0.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(212,181,116,0.4)}
+.btn-dark{background:#111}
+.btn-dark:hover{border-color:#d4b574;color:#d4b574}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:30px}
+.card{background:#101010;border:1px solid #1c1c1c;border-radius:18px;overflow:hidden;transition:0.3s}
+.card:hover{border-color:#d4b574;transform:translateY(-3px)}
+.card img{width:100%;height:200px;object-fit:cover;filter:grayscale(0.3)}
+.card .p{padding:20px;text-align:left}
+.card .p b{font-size:15px}
+.card .p p{color:#666;font-size:13px;margin-top:6px;line-height:1.5}
+.sec{padding:60px 0;border-top:1px solid #111}
+.sec h3{font-family:Syne;font-size:22px;letter-spacing:3px;text-align:center}
+.sec h3 span{color:#d4b574}
+.badge{display:inline-block;border:1px solid #222;background:#0e0e0e;padding:6px 12px;border-radius:20px;font-size:11px;color:#777;margin:4px}
+.contact-box{max-width:520px;margin:30px auto 0;background:#101010;border:1px solid #1c1c1c;border-radius:20px;padding:28px}
+input,textarea{width:100%;background:#070708;border:1px solid #222;color:#fff;padding:14px;border-radius:12px;margin:7px 0;font-family:Inter}
+footer{text-align:center;padding:50px 0;color:#333;font-size:11px;letter-spacing:2px;border-top:1px solid #111;margin-top:40px}
 </style>
 </head>
 <body>
-<div class="card">
-<div class="logo"><div class="logo-crown">👑</div><div class="logo-text">RGKM</div></div>
+<div class="wrap">
+<div class="top"><div class="logo"><div class="logo-mark">👑</div> RGKM STUDIO</div><div style="font-size:11px;color:#555;letter-spacing:2px">JOHANNESBURG • EST 2026</div></div>
+
+<div class="hero">
+<div class="crown"><div><div style="font-size:32px">👑</div><b>RGKM</b></div></div>
 <h1>RGKM</h1>
-<div class="tag">WEB DEVELOPMENT • UI/UX DESIGN • BRANDING</div>
-<div class="name">Ramsey Matevere</div>
-<div class="role">WEB DEVELOPER & DESIGNER<br>Founder @ RGKM Studio</div>
-<div class="line"></div>
-<a href="tel:+27607651968" class="btn gold">📞 CALL +27 60 765 1968</a>
-<a href="https://wa.me/27630361646?text=Hi%20Ramsey,%20I%20need%20a%20website" class="btn dark">💬 WHATSAPP +27 63 036 1646</a>
-<a href="mailto:ramsey@rgkm.co.za" class="btn dark">✉️ EMAIL ME</a>
-<a href="https://ramseymatevere691-lab.github.io/RGKM-/" class="btn dark">🌐 VIEW PORTFOLIO</a>
-<div class="foot">JOHANNESBURG • WEBSITES THAT CONVERT</div>
+<div class="sub">WEB DEVELOPMENT • UI/UX DESIGN • BRANDING</div>
+<h2>Ramsey Matevere <span>& GK</span></h2>
+<div class="tag">FOUNDERS @ RGKM STUDIO • WEB DEVELOPERS & DESIGNERS</div>
+
+<div class="btns">
+<a class="btn btn-gold" href="tel:+27607651968">📞 CALL +27 60 765 1968</a>
+<a class="btn btn-dark" href="https://wa.me/27630361646?text=Hi%20RGKM%20I%20need%20a%20website">💬 WHATSAPP +27 63 036 1646</a>
+<a class="btn btn-dark" href="mailto:ramseymatevere@gmail.com">✉️ EMAIL US</a>
+<a class="btn btn-dark" href="#work">🌐 VIEW PORTFOLIO</a>
+</div>
+</div>
+
+<div class="sec" id="work">
+<h3>SELECTED <span>WORK</span></h3>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700"><div class="p"><b>RGKM Agency Site</b><p>High-converting agency website built for lead generation.</p><div style="margin-top:10px"><span class="badge">Next.js</span><span class="badge">Conversion</span></div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=700"><div class="p"><b>E-Commerce Store</b><p>Online store with payments, stock & delivery.</p><div style="margin-top:10px"><span class="badge">Shopify</span><span class="badge">Payments</span></div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1522542550225-18e00aafae26?w=700"><div class="p"><b>Personal Portfolio</b><p>Clean portfolio for creatives & founders.</p><div style="margin-top:10px"><span class="badge">Portfolio</span><span class="badge">Fast</span></div></div></div>
+</div>
+</div>
+
+<div class="sec">
+<h3>WHAT WE <span>DO</span></h3>
+<div class="grid" style="margin-top:30px">
+<div class="card"><div class="p" style="padding:26px"><div style="font-size:22px">⚡</div><b style="display:block;margin-top:10px">Web Development</b><p>We build fast, modern websites that actually convert visitors into customers. Mobile-first, SEO-ready.</p></div></div>
+<div class="card"><div class="p" style="padding:26px"><div style="font-size:22px">🎨</div><b style="display:block;margin-top:10px">UI/UX Design</b><p>Designs that make your brand look premium. Clean, minimal, and built to build trust instantly.</p></div></div>
+<div class="card"><div class="p" style="padding:26px"><div style="font-size:22px">👑</div><b style="display:block;margin-top:10px">Branding</b><p>We position you as #1 in your industry. Logo, identity, strategy that makes you unforgettable.</p></div></div>
+</div>
+</div>
+
+<div class="sec" id="contact">
+<h3>LET'S BUILD <span>SOMETHING PRO</span></h3>
+<div class="contact-box">
+<p style="color:#666;font-size:13px;margin-bottom:14px">Tell us what you need — we reply in 5 minutes on WhatsApp</p>
+<input id="name" placeholder="Your Name">
+<textarea id="msg" placeholder="I need a website / branding for..."></textarea>
+<button class="btn btn-gold" style="width:100%;border:none" onclick="let n=document.getElementById('name').value||'Hi';let m=document.getElementById('msg').value||'I need a website';window.open('https://wa.me/27630361646?text='+encodeURIComponent('Hi RGKM, Im '+n+'. '+m),'_blank')">SEND TO RGKM ON WHATSAPP</button>
+<div style="display:flex;gap:10px;margin-top:12px"><a class="btn btn-dark" style="flex:1;text-align:center" href="tel:+27607651968">Call GK</a><a class="btn btn-dark" style="flex:1;text-align:center" href="https://wa.me/27630361646">Chat Ramsey</a></div>
+</div>
+</div>
+
+<footer>© 2026 RGKM STUDIO — FOUNDED BY RAMSEY MATEVERE & GK<br>JOHANNESBURG • WEBSITES THAT CONVERT • RGKM.AGENCY</footer>
 </div>
 </body>
 </html>
