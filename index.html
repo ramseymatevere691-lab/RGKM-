@@ -1,1 +1,708 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RGKM — Ramsey & Godwin Kazembe</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0a;color:#fff;font-family:Inter,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:20px}.card{width:100%;max-width:380px;background:#111;border:1px solid #1e1e1e;border-radius:28px;padding:36px 28px 28px;text-align:center}.logo{width:92px;height:92px;margin:0 auto 22px;border-radius:50%;border:1px solid #c9a86a;display:grid;place-items:center;background:#0a0a0a}.logo b{font-size:16px;letter-spacing:3px;color:#c9a86a;font-weight:600;margin-top:4px;display:block}h1{font-size:34px;letter-spacing:7px;font-weight:300}.sub{margin-top:14px;color:#c9a86a;font-size:10px;letter-spacing:3.5px}.founders{margin-top:28px;background:#151515;border:1px solid #1e1e1e;border-radius:16px;padding:14px;display:flex;justify-content:space-between}.founders b{font-size:12px}.founders span{font-size:9px;color:#777;letter-spacing:1px;display:block;margin-top:2px}.divider{height:1px;background:#1e1e1e;margin:24px 0}.btn{width:100%;display:flex;justify-content:center;padding:15px;border-radius:14px;font-size:13px;font-weight:600;text-decoration:none;margin:9px 0;border:1px solid #1e1e1e}.btn-gold{background:#c9a86a;color:#000}.btn-dark{background:#181818;color:#fff}.foot{margin-top:22px;color:#999;font-size:9px;letter-spacing:2px;line-height:1.8}.foot b{color:#ccc}</style></head><body><div class="card"><div class="logo"><div><div style="font-size:22px">🌐 </div><b>RGKM</b></div></div><h1>RGKM</h1><div class="sub">WEB DEVELOPMENT • UI/UX DESIGN • BRANDING</div><div class="founders"><div><b>Ramsey Matevere</b><span>CO-FOUNDER • DEV</span></div><div style="text-align:right"><b>Godwin Kazembe</b><span>CO-FOUNDER • DESIGN</span></div></div><div class="divider"></div><a class="btn btn-gold" href="tel:+27607651968">📞 CALL +27 60 765 1968</a><a class="btn btn-dark" href="https://wa.me/27630361646">💬 WHATSAPP +27 63 036 1646</a><a class="btn btn-dark" href="mailto:ramseymatevere@gmail.com">✉️ EMAIL US</a><a class="btn btn-dark" href="https://wa.me/27630361646?text=Hi%20RGKM">🌐 VIEW PORTFOLIO<a href="pricing.html" style="display:block;text-align:center;margin:15px auto;padding:14px 30px;border:1px solid #c9a86a;color:#c9a86a;text-decoration:none;border-radius:30px;width:200px;letter-spacing:2px;">VIEW PRICING</a></a><div class="foot"><b>RGKM STUDIO</b><br>RAMSEY MATEVERE & GODWIN KAZEMBE<br>JOHANNESBURG • EST 2026</div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RGKM Studio - Web Development, UI/UX Design and Branding.">
+  <title>RGKM Studio | Web Development • UI/UX • Branding</title>
+
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #0b0b0b;
+      --gold: #b18a45;
+      --gold-light: #d2ae68;
+      --blue: #28a9ff;
+      --text: #f5f5f5;
+      --muted: #a9a9a9;
+      --line: rgba(210, 174, 104, 0.28);
+      --white-line: rgba(255,255,255,0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(177,138,69,0.10), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5,5,5,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--white-line);
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      letter-spacing: 7px;
+      color: var(--gold-light);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 70px 0;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .logo-circle {
+      width: 125px;
+      height: 125px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 30px;
+      position: relative;
+      box-shadow: 0 0 35px rgba(177,138,69,0.08);
+    }
+
+    .logo-circle .globe {
+      font-size: 42px;
+      color: var(--blue);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .logo-circle span:last-child {
+      position: absolute;
+      bottom: 18px;
+      letter-spacing: 5px;
+      color: var(--gold-light);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 92px);
+      letter-spacing: 15px;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+
+    .hero .tagline {
+      color: var(--gold-light);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-size: clamp(12px, 2vw, 17px);
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--white-line);
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 720px;
+      margin: 0 auto 35px;
+    }
+
+    .founder {
+      padding: 22px;
+    }
+
+    .founder + .founder {
+      border-left: 1px solid var(--white-line);
+    }
+
+    .founder strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .founder small {
+      color: #999;
+      letter-spacing: 3px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      padding: 15px 22px;
+      border-radius: 12px;
+      border: 1px solid var(--white-line);
+      transition: 0.25s;
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .btn-primary {
+      background: #3b1703;
+      border-color: #70401e;
+    }
+
+    .btn-gold {
+      color: var(--gold-light);
+      border-color: var(--gold);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 12px auto 0;
+    }
+
+    /* ABOUT */
+    .about-box {
+      border: 1px solid var(--white-line);
+      border-radius: 22px;
+      padding: 35px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.025), rgba(177,138,69,0.025));
+    }
+
+    .about-box p {
+      color: #c4c4c4;
+      margin-bottom: 15px;
+    }
+
+    /* SERVICES */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--white-line);
+      border-radius: 20px;
+      padding: 30px;
+      background: var(--card);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.3);
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* PORTFOLIO */
+    .project {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1)),
+        linear-gradient(135deg, #171717, #080808);
+    }
+
+    .project-label {
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    /* PRICING */
+    .price-card {
+      text-align: center;
+    }
+
+    .price {
+      font-size: 34px;
+      color: var(--gold-light);
+      margin: 12px 0;
+      font-weight: 700;
+    }
+
+    .price-card ul {
+      list-style: none;
+      color: #bbb;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .price-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* WHY US */
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .why-item {
+      border: 1px solid var(--white-line);
+      border-radius: 16px;
+      padding: 22px;
+      color: #ccc;
+    }
+
+    .why-item strong {
+      display: block;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      border: 1px solid var(--gold);
+      border-radius: 25px;
+      padding: 45px;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(177,138,69,0.08), transparent 65%);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    footer {
+      border-top: 1px solid var(--white-line);
+      padding: 35px 0;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 760px) {
+      .nav-inner {
+        justify-content: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        letter-spacing: 9px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .founders {
+        grid-template-columns: 1fr;
+      }
+
+      .founder + .founder {
+        border-left: 0;
+        border-top: 1px solid var(--white-line);
+      }
+
+      .grid,
+      .why-list {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="logo">RGKM</a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container hero-content">
+
+      <div class="logo-circle">
+        <span class="globe">🌐</span>
+        <span>RGKM</span>
+      </div>
+
+      <h1>RGKM</h1>
+
+      <p class="tagline">Web Development • UI/UX Design • Branding</p>
+
+      <p class="hero-description">
+        We create modern websites, digital experiences and brand designs
+        that help businesses present themselves professionally online.
+      </p>
+
+      <div class="founders">
+        <div class="founder">
+          <strong>Ramsey Matevere</strong>
+          <small>CO-FOUNDER • DEV</small>
+        </div>
+
+        <div class="founder">
+          <strong>Godwin Kazembe</strong>
+          <small>CO-FOUNDER • DESIGN</small>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="tel:+27607651968">📞 Call +27 60 765 1968</a>
+        <a class="btn" href="https://wa.me/27630361646" target="_blank">💬 WhatsApp Us</a>
+        <a class="btn btn-gold" href="#portfolio">🌐 View Portfolio</a>
+        <a class="btn" href="#pricing">💰 View Pricing</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <span>Who We Are</span>
+        <h2>About RGKM</h2>
+        <p>Two creators working together to build a stronger digital presence for businesses.</p>
+      </div>
+
+      <div class="about-box">
+        <p>
+          RGKM Studio is a creative digital team founded by Ramsey Matevere
+          and Godwin Kazembe.
+        </p>
+
+        <p>
+          We focus on web development, UI/UX design and branding. Our goal is
+          to create clean, modern and useful digital experiences that make
+          businesses look professional online.
+        </p>
+
+        <p>
+          Whether you need a new website, a better user experience or a
+          stronger visual identity, RGKM can help turn your idea into a
+          professional digital product.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <span>What We Do</span>
+        <h2>Our Services</h2>
+        <p>Digital solutions designed around your business and your goals.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Web Development</h3>
+          <p>
+            Modern, responsive websites designed to work smoothly on phones,
+            tablets and computers.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Clean and user-friendly interfaces that make websites and digital
+            products easier and more enjoyable to use.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Branding</h3>
+          <p>
+            Professional visual direction that helps your business build a
+            consistent and memorable identity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <span>Our Work</span>
+        <h2>Portfolio</h2>
+        <p>Replace these sample projects with your real work as your portfolio grows.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card project">
+          <div>
+            <div class="project-label">Web Development</div>
+            <h3>Business Website</h3>
+            <p>Responsive website concept for a growing business.</p>
+          </div>
+        </div>
+
+        <div class="card project">
+          <div>
+            <div class="project-label">UI/UX</div>
+            <h3>Mobile Interface</h3>
+            <p>Clean interface concept focused on simple navigation.</p>
+          </div>
+        </div>
+
+        <div class="card project">
+          <div>
+            <div class="project-label">Branding</div>
+            <h3>Brand Identity</h3>
+            <p>Modern visual identity concept for a new brand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-title">
+        <span>Simple Packages</span>
+        <h2>Pricing</h2>
+        <p>Choose a starting package, then contact us for a custom quote.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card price-card">
+          <h3>Starter</h3>
+          <div class="price">From R1,500</div>
+          <ul>
+            <li>✓ Simple website</li>
+            <li>✓ Mobile-friendly design</li>
+            <li>✓ Basic contact section</li>
+            <li>✓ Basic styling</li>
+          </ul>
+          <a href="https://wa.me/27630361646?text=Hi%20RGKM%2C%20I%27m%20interested%20in%20the%20Starter%20package." target="_blank" class="btn btn-gold">Get Quote</a>
+        </div>
+
+        <div class="card price-card">
+          <h3>Business</h3>
+          <div class="price">From R3,500</div>
+          <ul>
+            <li>✓ Multi-section website</li>
+            <li>✓ Responsive design</li>
+            <li>✓ Portfolio section</li>
+            <li>✓ Contact buttons</li>
+          </ul>
+          <a href="https://wa.me/27630361646?text=Hi%20RGKM%2C%20I%27m%20interested%20in%20the%20Business%20package." target="_blank" class="btn btn-gold">Get Quote</a>
+        </div>
+
+        <div class="card price-card">
+          <h3>Custom</h3>
+          <div class="price">Let's Talk</div>
+          <ul>
+            <li>✓ Custom website</li>
+            <li>✓ UI/UX design</li>
+            <li>✓ Branding support</li>
+            <li>✓ Custom requirements</li>
+          </ul>
+          <a href="https://wa.me/27630361646?text=Hi%20RGKM%2C%20I%27d%20like%20a%20custom%20website%20quote." target="_blank" class="btn btn-gold">Contact Us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY RGKM -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <span>Why Choose Us</span>
+        <h2>Why RGKM?</h2>
+      </div>
+
+      <div class="why-list">
+        <div class="why-item">
+          <strong>📱 Mobile-first</strong>
+          Your website should look good on the phone your customers actually use.
+        </div>
+
+        <div class="why-item">
+          <strong>🎯 Clean Design</strong>
+          We focus on simple layouts that make information easy to understand.
+        </div>
+
+        <div class="why-item">
+          <strong>⚡ Modern Approach</strong>
+          We use modern web techniques to create fast and responsive pages.
+        </div>
+
+        <div class="why-item">
+          <strong>🤝 Direct Communication</strong>
+          Contact us directly through WhatsApp or phone to discuss your project.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="section-title" style="margin-bottom: 0;">
+          <span>Start Your Project</span>
+          <h2>Let's Build Something Great</h2>
+          <p>
+            Tell us what you need and we'll discuss the best solution for your project.
+          </p>
+        </div>
+
+        <div class="contact-buttons">
+          <a class="btn btn-primary" href="tel:+27607651968">📞 Call Us</a>
+          <a class="btn btn-gold" href="https://wa.me/27630361646?text=Hi%20RGKM%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>RGKM STUDIO</p>
+      <p>RAMSEY MATEVERE & GODWIN KAZEMBE</p>
+      <p>JOHANNESBURG • EST. 2026</p>
+    </div>
+  </footer>
+
+</body>
+  </html>
